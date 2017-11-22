@@ -1,0 +1,27 @@
+<script type="text/javascript" language="javascript">
+
+function calc()
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:5002/calc?num1="+document.getElementById("in1").value+"&num2="+document.getElementById("in2").value, false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+	document.getElementById("res").value = response.result;
+}
+
+</script>
+
+<body id='bod'>
+<html>
+<input type="text" id="in1"/>
++
+<input type="text" id="in2"/>
+=
+<input type="text" id="res"/ readonly>
+<button type="submit" onclick="javascript:calc()">Calc</button>
+<div id='div'>
+
+</div>
+</html>
+</body>

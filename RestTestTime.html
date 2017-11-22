@@ -1,0 +1,28 @@
+<script type="text/javascript" language="javascript">
+
+function send()
+{
+	document.getElementById("txt2").value = "Sending";
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:5002/time", false);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+	document.getElementById("txtare").value = response.time;
+	document.getElementById("txt2").value = "Ready";
+}
+
+</script>
+
+<body id='bod'>
+<html>
+<button type="submit" onclick="javascript:send()">Send</button>
+<br>
+<textarea cols="50" rows="20" id="txtare"></textarea>
+<br>
+<input type="text" id="txt2"/>
+<div id='div'>
+
+</div>
+</html>
+</body>
