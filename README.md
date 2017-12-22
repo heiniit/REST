@@ -3,9 +3,12 @@ Playing with REST (and HTTP) servers/clients
 
 # Usage
 To run the whole functionality, start both servers (http and REST) using two separate command prompts:
-> python HttpSrv.py
+
+`> python HttpSrv.py`
+
 and:
-> python RestSrv.py
+
+`> python RestSrv.py`
 
 Then start browser and go to address http://127.0.0.1/
 
